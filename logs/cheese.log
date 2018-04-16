@@ -1,0 +1,3 @@
+[2018-11-23T15:34:37.153] [INFO] cheese - Redis connection success!
+[2018-11-23T15:34:37.173] [INFO] cheese - MongoDB connection success!
+[2018-11-26T15:30:34.963] [ERROR] cheese - Redis connection error: Error: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379
