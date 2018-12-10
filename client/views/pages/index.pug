@@ -1,0 +1,16 @@
+extends ../layout.pug
+
+block content
+  .content
+    .tab-list
+      each item in [{ name: '全部', url: 'all' }, { name: '精华', url: 'good' }].concat(tabs)
+        if currentTab === item.url
+          a.active(href="?tab=" + item.url) #{item.name}
+        else
+          a(href="?tab=" + item.url) #{item.name}
+    include ./topic/list.pug
+  aside.sider
+    include ../includes/view_source.pug
+    include ../includes/user_ranking.pug
+    include ../includes/no_reply_topic.pug
+    include ../includes/friendship_community.pug

@@ -1,0 +1,29 @@
+<view class="container">
+  <navigator class="logo" open-type="switchTab" url="../index/index">
+    <image src="/static/img/logo.png" mode="aspectFit" />
+  </navigator>
+  <form class="form" bindsubmit="signin">
+    <view class="form-item">
+      <input
+        type="number"
+        name="mobile"
+        maxlength="11"
+        placeholder="手机号"
+      />
+    </view>
+    <view class="form-item">
+      <input
+        type="password"
+        name="password"
+        placeholder="密码"
+      />
+    </view>
+    <view class="form-item">
+      <button class="submit" form-type="submit">登录</button>
+    </view>
+  </form>
+  <view class="action">
+    <navigator open-type="redirect" url="../forget/forget">忘记密码？</navigator>
+    <navigator open-type="redirect" url="../signup/signup">立即注册</navigator>
+  </view>
+</view>

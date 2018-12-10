@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "搜索话题",
+  "usingComponents": {
+    "topics": "../../../components/topics/topics"
+  }
+}

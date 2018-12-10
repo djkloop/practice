@@ -1,0 +1,10 @@
+<view class="topic" wx:for="{{data}}" wx:key="id">
+  <navigator url="/pages/user/user?uid={{item.author.id}}">
+    <image class="avatar" src="{{item.author.avatar}}" mode="aspectFit" />
+  </navigator>
+  <text class="tag point" wx:if="{{item.top}}">置顶</text>
+  <text class="tag point" wx:elif="{{item.good}}">精华</text>
+  <text class="tag" wx:else>{{item.tabName}}</text>
+  <navigator url="/pages/index/detail/detail?tid={{item.id}}" class="title">{{item.title}}</navigator>
+  <text class="time">{{item.last_reply_at_ago}}</text>
+</view>

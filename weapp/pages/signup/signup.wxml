@@ -1,0 +1,51 @@
+<view class="container">
+  <navigator class="logo" open-type="switchTab" url="../index/index">
+    <image src="/static/img/logo.png" mode="aspectFit" />
+  </navigator>
+  <form class="form" bindsubmit="signup">
+    <view class="form-item">
+      <input
+        type="number"
+        name="mobile"
+        maxlength="11"
+        placeholder="请输入手机号"
+        bindblur="handleMobileFin"
+      />
+    </view>
+    <view class="form-item">
+      <input
+        type="password" 
+        name="password"
+        placeholder="请输入密码"
+      />
+    </view>
+    <view class="form-item">
+      <input
+        type="text"
+        name="nickname"
+        placeholder="请输入昵称"
+      />
+    </view>
+    <view class="form-item">
+      <input
+        type="text"
+        maxlength="6"
+        name="sms"
+        placeholder="请输入短信验证码"
+      />
+      <button
+        class="get-sms"
+        size="mini"
+        catchtap="handleGetSmsCode"
+        disabled="{{disabled}}"
+      >{{text}}</button>
+    </view>
+    <view class="form-item">
+      <button class="submit" form-type="submit">注册</button>
+    </view>
+  </form>
+  <view class="action">
+    <navigator open-type="redirect" url="../forget/forget">忘记密码？</navigator>
+    <navigator open-type="redirect" url="../signin/signin">已有账户？</navigator>
+  </view>
+</view>

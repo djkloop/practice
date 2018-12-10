@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="search-input">
+    <input
+      type="text"
+      placeholder="请输入搜索内容"
+      bindconfirm="handleSearchTopic"
+    />
+    <icon
+      type="search"
+      size="15"
+    />
+    <navigator open-type="navigateBack">取消</navigator>
+  </view>
+  <view class="search-result">
+    <topics data="{{result}}" />
+  </view>
+</view>

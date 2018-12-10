@@ -1,0 +1,49 @@
+extends ../../layout.pug
+
+block content
+  .layout-full.user-acc
+    .title
+      span.practice &#xe653;
+      | 用户登录
+    .content
+      form#signinForm.form.form-horizontal(method="post")
+        .alert.alert-error(class={hidden: !error}) #{error}
+        .form-item
+          label.label(for="mobile") 手机号：
+          .control
+            input(type="text", id="mobile", name="mobile", minlength="11", maxlength="11", placeholder="请输入你的手机号", autocomplete="off")
+        .form-item
+          label.label(for="password") 密码：
+          .control
+            input(type="password", id="password", name="password", minlength="6", maxlength="18", placeholder="请输入你的密码", autocomplete="off")
+        .form-item
+          label.label(for="piccaptcha") 验证码：
+          .control
+            input(type="text", id="piccaptcha", name="piccaptcha", minlength="5", maxlength="5", placeholder="请输入六位验证", autocomplete="off")
+            img.captcha(src=picUrl, alt="图形验证码")
+        .form-item
+          label.label
+          .control
+            button.btn.submit(type="submit") 立即登录
+      .other
+        p 尚未拥有账号？
+        p 请点击
+          a(href="/signup") 注册
+        p 忘记密码了？
+        p 请点击
+          a(href="/forget_pass") 忘记密码
+append footer
+  script.
+    var mobile = $('#mobile');
+    var piccaptcha = $('#piccaptcha');
+    var alert = $('.alert');
+
+    $('#signinForm').submit(function() {
+      if (!mobile.val() || !(/^1[3,5,7,8,9]\d{9}$/.test(mobile.val()))) {
+        alert.text('请填写正确格式的手机号').slideDown();
+        return false;
+      } else if (!piccaptcha.val() || piccaptcha.val().length !== 5) {
+        alert.text('请填写正确格式的图形验证码').slideDown();
+        return false;
+      }
+    });

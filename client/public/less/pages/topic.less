@@ -1,0 +1,415 @@
+/* stylelint-disable */
+.float-action {
+  position: fixed;
+  left: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  a {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    .size(40px);
+
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+    background: @white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 6px rgba(0,0,0,.2);
+
+    &.active {
+      color: @theme-color;
+    }
+
+    .number {
+      position: absolute;
+      top: -4px;
+      right: 0;
+      height: 12px;
+      line-height: 12px;
+      padding: 0 3px;
+      font-size: 10px;
+      color: @white;
+      background: @dark-gray;
+      border-radius: 6px;
+    }
+  }
+}
+
+.tab-list {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px dashed @light-gray;
+
+  a {
+    padding: 5px 10px;
+    margin-right: 10px;
+    font-size: 16px;
+
+    &.active {
+      background: @theme-color;
+      color: @white;
+    }
+  }
+}
+
+.topic-author {
+  .info {
+    display: flex;
+    align-items: center;
+
+    .avatar {
+      flex: 0 0 40px;
+      padding: 10px 20px;
+      height: 40px;
+    }
+
+    .location {
+      margin-left: 6px;
+      font-size: 12px;
+      color: @dark-gray;
+    }
+  }
+
+  .other {
+    padding: 0 20px 10px;
+
+    .score {
+      margin: 6px 0;
+    }
+
+    .signature {
+      width: 100%;
+      .text-ellipsis;
+
+      font-style: italic;
+      color: @dark-gray;
+      font-size: 13px;
+    }
+  }
+}
+
+.topic-create {
+  flex: 1;
+  padding: 25px 20px;
+  background: @white;
+  border-radius: 4px;
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  input[id="title"] {
+    width: 100%;
+  }
+
+  .submit {
+    width: 160px;
+    line-height: 40px;
+    border-radius: 4px;
+  }
+}
+
+.topic-detail {
+  margin-bottom: 80px;
+
+  .author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    .avatar {
+      flex: 0 0 40px;
+      margin-right: 10px;
+      .size(40px);
+
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .text {
+    flex: auto;
+
+    a {
+      display: block;
+      font-weight: bold;
+    }
+
+    span {
+      font-size: 13px;
+      color: @dark-gray;
+
+      & + span {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .title {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    padding-bottom: .3em;
+    line-height: 1.25;
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  .action {
+    margin-top: 20px;
+
+    a {
+      margin-right: 10px;
+    }
+  }
+}
+
+.topic-list {
+  margin-top: 10px;
+
+  .topic {
+    display: flex;
+    margin-bottom: 10px;
+    height: 50px;
+    line-height: 50px;
+    background: rgba(@theme-color,.1);
+
+    .avatar {
+      flex: 0 0 30px;
+      margin: 10px 0 0 10px;
+      .size(30px);
+    }
+
+    .content {
+      flex: auto;
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      overflow: hidden;
+
+      .tag {
+        flex: 0 0 40px;
+        padding: 2px 0;
+        margin-right: 8px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 12px;
+        color: @white;
+        background: @dark-gray;
+        border-radius: 2px;
+        text-align: center;
+
+        &.stress {
+          background: @theme-color;
+        }
+      }
+
+      a.title {
+        flex: auto;
+        .text-ellipsis;
+      }
+    }
+
+    .statistics {
+      flex: 0 0 80px;
+      display: flex;
+      align-items: center;
+
+      span {
+        flex: 1;
+        font-size: 12px;
+
+        i.practice {
+          margin-right: 4px;
+          font-size: 13px;
+          vertical-align: top;
+        }
+      }
+    }
+
+    .date {
+      flex: 0 0 110px;
+      font-size: 12px;
+      text-align: left;
+
+      a {
+        display: inline-block;
+        .size(30px);
+
+        vertical-align: middle;
+      }
+
+      span {
+        margin-left: 6px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.no-reply {
+  li {
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+    color: @dark-gray;
+
+    a {
+      display: block;
+      width: 100%;
+      .text-ellipsis;
+    }
+  }
+}
+
+.reply-create {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 20px;
+  background: #f1f1f1;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+
+  .avatar {
+    flex: 0 0 40px;
+    margin-right: 10px;
+    height: 40px;
+  }
+
+  a {
+    color: @theme-color;
+  }
+
+  .reply-form {
+    flex: auto;
+
+    textarea {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 10px;
+      border-color: #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+
+      &:focus {
+        border-color: @theme-color;
+      }
+    }
+
+    .btn {
+      float: right;
+    }
+  }
+}
+
+.reply-list {
+  margin-top: 20px;
+  padding: 10px 20px;
+
+  li {
+    display: flex;
+  }
+
+  .avatar {
+    flex: 0 0 40px;
+    margin-right: 20px;
+    height: 40px;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .detail {
+    flex: auto;
+    padding: 0 0 10px;
+    border-bottom: 1px dashed #f1f1f1;
+
+    .nickname {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1;
+    }
+
+    .content {
+      line-height: 30px;
+    }
+
+    .action {
+      position: relative;
+
+      a.practice {
+        margin-right: 10px;
+        color: @gray;
+        font-size: 12px;
+
+        &:hover {
+          color: @theme-color;
+        }
+
+        span {
+          margin-left: 4px;
+        }
+      }
+
+      time {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: @gray;
+        font-size: 13px;
+        vertical-align: middle;
+      }
+    }
+
+    .reply-form {
+      display: none;
+
+      textarea {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+        width: 100%;
+        border-color: #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .no-reply {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+
+.reply-title {
+  position: relative;
+  padding: 0 40%;
+  margin: 20px 0;
+  text-align: center;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    border: 1px dashed #f1f1f1;
+    background: #f1f1f1;
+  }
+
+  &::before {
+    left: 0;
+    transform: translate(10%,-50%);
+  }
+
+  &::after {
+    right: 0;
+    transform: translate(-10%,-50%);
+  }
+}

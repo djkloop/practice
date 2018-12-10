@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index/detail/detail",
+    "pages/index/search/search",
+    "pages/static/static",
+    "pages/user/user",
+    "pages/notice/notice",
+    "pages/me/me",
+    "pages/signin/signin",
+    "pages/signup/signup",
+    "pages/forget/forget",
+    "pages/welcome/welcome"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "Mints - 薄荷糖社区"
+  },
+  "tabBar": {
+    "color": "#808080",
+    "selectedColor": "#333",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "static/img/tab/home.png",
+        "selectedIconPath": "static/img/tab/home_active.png"
+      },
+      {
+        "pagePath": "pages/notice/notice",
+        "text": "消息",
+        "iconPath": "static/img/tab/notice.png",
+        "selectedIconPath": "static/img/tab/notice_active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "static/img/tab/me.png",
+        "selectedIconPath": "static/img/tab/me_active.png"
+      }
+    ]
+  }
+}
